@@ -4,4 +4,3 @@ description: 'Starts a docker enviorment with an underwater Gazebo Simulator, an
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  options: -it
