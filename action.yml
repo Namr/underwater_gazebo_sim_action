@@ -1,0 +1,8 @@
+# action.yml
+name: 'Underwater Gazebo Simulation'
+description: 'Starts a docker enviorment with an underwater Gazebo Simulator, and NCSU underwater robot software'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - -it bash -c "cd Seawolf-8-Software; ./test_start.sh"
