@@ -10,3 +10,5 @@ WORKDIR /Seawolf-8-Software
 RUN git checkout oracle
 
 RUN source /opt/ros/melodic/setup.bash; catkin_make clean; rm -rf build; catkin_make
+
+CMD bash -c "./test_start.sh"

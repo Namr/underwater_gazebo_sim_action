@@ -4,5 +4,4 @@ description: 'Starts a docker enviorment with an underwater Gazebo Simulator, an
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - -it bash -c "cd Seawolf-8-Software; ./test_start.sh"
+  options: -it
