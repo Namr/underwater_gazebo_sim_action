@@ -11,4 +11,4 @@ RUN git checkout oracle
 
 RUN source /opt/ros/melodic/setup.bash; catkin_make clean; rm -rf build; catkin_make
 
-CMD ls
+ENTRYPOINT ["unbuffer", "./test_start.sh"]
