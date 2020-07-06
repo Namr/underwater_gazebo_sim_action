@@ -7,8 +7,8 @@ WORKDIR /
 
 RUN git clone https://github.com/ncsurobotics/Seawolf-8-Software.git
 WORKDIR /Seawolf-8-Software
-RUN git checkout oracle
+RUN git checkout pose-control
 
 RUN source /opt/ros/melodic/setup.bash; catkin_make clean; rm -rf build; catkin_make
 
-ENTRYPOINT ["/Seawolf-8-Software/test_monitor.py"]
+ENTRYPOINT ["unbuffer", "/Seawolf-8-Software/test_start.sh"]
